@@ -1,11 +1,21 @@
 function isPalindrome(word) {
+  for(let i = 0; i <word.length / 2; i++){
+    const j = word.length - 1 -i;
+    if (word[i] !== word[j]) {
+      return false;
+    }
+  }
+  return true;
   // Write your algorithm here
 }
+// Need to make a function for isPalindrome that will return if a word is a palindrome through true or false 
+// When the string the same forwards or backwards come back as true but false if it is not same forwards or backwards
+// Test through the first letter being the same as the last letter and so on
 
 /* 
   Add your pseudocode here
 */
-
+// if the first letter is the same as the last and second letter is the same as the second to last. The function should return true.
 /*
   Add written explanation of your solution here
 */
@@ -22,4 +32,6 @@ if (require.main === module) {
   console.log("=>", isPalindrome("robot"));
 }
 
+  console.log("Expecting: true");
+  console.log('=>', isPalindrome('mom'))
 module.exports = isPalindrome;
